@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wSRDataSet = new WSR.WSRDataSet();
-            this.wSRDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tasksTableAdapter = new WSR.WSRDataSetTableAdapters.tasksTableAdapter();
             this.ID_t = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_log = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Загол = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Сложн = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Стат = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Характер = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wSRDataSet = new WSR.WSRDataSet();
+            this.wSRDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tasksTableAdapter = new WSR.WSRDataSetTableAdapters.tasksTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tasksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wSRDataSet)).BeginInit();
@@ -49,6 +49,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_t,
@@ -57,30 +58,11 @@
             this.Сложн,
             this.Стат,
             this.Характер});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 36);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(723, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(723, 349);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // tasksBindingSource
-            // 
-            this.tasksBindingSource.DataMember = "tasks";
-            this.tasksBindingSource.DataSource = this.wSRDataSet;
-            // 
-            // wSRDataSet
-            // 
-            this.wSRDataSet.DataSetName = "WSRDataSet";
-            this.wSRDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // wSRDataSetBindingSource
-            // 
-            this.wSRDataSetBindingSource.DataSource = this.wSRDataSet;
-            this.wSRDataSetBindingSource.Position = 0;
-            // 
-            // tasksTableAdapter
-            // 
-            this.tasksTableAdapter.ClearBeforeFill = true;
             // 
             // ID_t
             // 
@@ -125,12 +107,31 @@
             this.Характер.ReadOnly = true;
             this.Характер.Width = 170;
             // 
+            // tasksBindingSource
+            // 
+            this.tasksBindingSource.DataMember = "tasks";
+            this.tasksBindingSource.DataSource = this.wSRDataSet;
+            // 
+            // wSRDataSet
+            // 
+            this.wSRDataSet.DataSetName = "WSRDataSet";
+            this.wSRDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // wSRDataSetBindingSource
+            // 
+            this.wSRDataSetBindingSource.DataSource = this.wSRDataSet;
+            this.wSRDataSetBindingSource.Position = 0;
+            // 
+            // tasksTableAdapter
+            // 
+            this.tasksTableAdapter.ClearBeforeFill = true;
+            // 
             // Manager_koef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(936, 397);
+            this.ClientSize = new System.Drawing.Size(752, 397);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Manager_koef";

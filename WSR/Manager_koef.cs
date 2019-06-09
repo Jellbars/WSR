@@ -32,7 +32,8 @@ namespace WSR
             a = null;
             if (Znach.id_login.ToString().Length > 0)
             {
-                a = "Select [tasks].ID_tasks, [Users].[ID_login], [tasks].Заголовок, [tasks].Сложность, Статус, [Характер_работы] From tasks join Users on tasks.ID_tasks = Users.ID_manager Where Users.ID_manager ='" + Znach.id_login +"'";
+                a = "Select tasks.[ID_tasks],Users.ФИО_cотрудника, tasks.[Заголовок] ,[Сложность] ,[Статус] ,[Характер_работы] FROM[tasks] join Users on tasks.ID_login = Users.ID_login";
+                /*Where Users.ID_manager = '" + Znach.id_login +"*/
             }
             using (sqlcon = new SqlConnection(Znach.connectionString))
                 try
@@ -44,8 +45,8 @@ namespace WSR
                     {
                         while (reader.Read())
                         {
-                            data.Add(new string[10]);
-                            for (int i = 0; i < 5; i++)
+                            data.Add(new string[100]);
+                            for (int i = 0; i < 6; i++)
                             {
                                 data[data.Count - 1][i] = reader[i].ToString();
                             }
@@ -65,6 +66,11 @@ namespace WSR
                     foreach (string[] s in data)
                         dataGridView1.Rows.Add(s);
                 }
+        }
+
+        private void Manager_koef_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
