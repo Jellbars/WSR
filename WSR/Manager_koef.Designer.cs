@@ -30,16 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID_t = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_log = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Загол = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Сложн = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Стат = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Характер = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wSRDataSet = new WSR.WSRDataSet();
             this.wSRDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tasksTableAdapter = new WSR.WSRDataSetTableAdapters.tasksTableAdapter();
+            this.ID_log = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Фио = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.грейд = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.колво = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tasksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wSRDataSet)).BeginInit();
@@ -52,60 +50,15 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_t,
             this.ID_log,
-            this.Загол,
-            this.Сложн,
-            this.Стат,
-            this.Характер});
+            this.Фио,
+            this.грейд,
+            this.колво});
             this.dataGridView1.Location = new System.Drawing.Point(12, 36);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(723, 349);
+            this.dataGridView1.Size = new System.Drawing.Size(448, 349);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ID_t
-            // 
-            this.ID_t.DataPropertyName = "ID_tasks";
-            this.ID_t.HeaderText = "ID_tasks";
-            this.ID_t.Name = "ID_t";
-            this.ID_t.ReadOnly = true;
-            // 
-            // ID_log
-            // 
-            this.ID_log.DataPropertyName = "ID_login";
-            this.ID_log.HeaderText = "ID_login";
-            this.ID_log.Name = "ID_log";
-            this.ID_log.ReadOnly = true;
-            // 
-            // Загол
-            // 
-            this.Загол.DataPropertyName = "Заголовок";
-            this.Загол.HeaderText = "Заголовок";
-            this.Загол.Name = "Загол";
-            this.Загол.ReadOnly = true;
-            // 
-            // Сложн
-            // 
-            this.Сложн.DataPropertyName = "Сложность";
-            this.Сложн.HeaderText = "Сложность";
-            this.Сложн.Name = "Сложн";
-            this.Сложн.ReadOnly = true;
-            // 
-            // Стат
-            // 
-            this.Стат.DataPropertyName = "Статус";
-            this.Стат.HeaderText = "Статус";
-            this.Стат.Name = "Стат";
-            this.Стат.ReadOnly = true;
-            // 
-            // Характер
-            // 
-            this.Характер.DataPropertyName = "Характер_работы";
-            this.Характер.HeaderText = "Характер_работы";
-            this.Характер.Name = "Характер";
-            this.Характер.ReadOnly = true;
-            this.Характер.Width = 170;
             // 
             // tasksBindingSource
             // 
@@ -125,6 +78,31 @@
             // tasksTableAdapter
             // 
             this.tasksTableAdapter.ClearBeforeFill = true;
+            // 
+            // ID_log
+            // 
+            this.ID_log.DataPropertyName = "ID_login";
+            this.ID_log.HeaderText = "ID_login";
+            this.ID_log.Name = "ID_log";
+            this.ID_log.ReadOnly = true;
+            // 
+            // Фио
+            // 
+            this.Фио.HeaderText = "Фио";
+            this.Фио.Name = "Фио";
+            this.Фио.ReadOnly = true;
+            // 
+            // грейд
+            // 
+            this.грейд.HeaderText = "Грейд";
+            this.грейд.Name = "грейд";
+            this.грейд.ReadOnly = true;
+            // 
+            // колво
+            // 
+            this.колво.HeaderText = "Кол-во выполненых задач";
+            this.колво.Name = "колво";
+            this.колво.ReadOnly = true;
             // 
             // Manager_koef
             // 
@@ -152,11 +130,9 @@
         private WSRDataSet wSRDataSet;
         private System.Windows.Forms.BindingSource tasksBindingSource;
         private WSRDataSetTableAdapters.tasksTableAdapter tasksTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_t;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_log;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Загол;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Сложн;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Стат;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Характер;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Фио;
+        private System.Windows.Forms.DataGridViewTextBoxColumn грейд;
+        private System.Windows.Forms.DataGridViewTextBoxColumn колво;
     }
 }
